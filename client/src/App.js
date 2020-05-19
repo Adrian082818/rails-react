@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import NewGame from './containers/NewGame'
 import GameShow from './containers/GameShow'
 import GamePage from './containers/GamePage'
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
