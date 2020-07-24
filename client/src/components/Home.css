@@ -1,0 +1,27 @@
+.container {
+    border-style: hidden;
+    padding: 30px;
+}
+
+.intro1 {
+    padding-inline: 450px;
+    animation: 10s fadeIn;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.gameGif {
+    margin-bottom: 45px;
+}
+
