@@ -5,7 +5,7 @@ import { fetchGames } from '../actions'
 // import GameList from '../components/GameList'
 import GameShow from './GameShow'
 import SideBar from '../components/SideBar'
-import { Button } from 'react-bootstrap'
+// import { Button } from 'react-bootstrap'
 
 class GamesContainer extends React.Component {
 

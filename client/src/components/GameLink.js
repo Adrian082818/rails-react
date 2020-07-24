@@ -21,10 +21,10 @@ class GameLink extends Component {
         return(
 
             <><Link key={this.props.game.id} to={`/games/${this.props.game.id}`}>{this.props.game.title} <br/></Link>
-            <Button
+            <Button variant="success"
             onClick={this.handleClick}
             >
-            counter: {this.state.counter}
+            Playthrough: {this.state.counter}
             </Button></>
         )
 
