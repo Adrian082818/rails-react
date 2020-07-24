@@ -52,7 +52,7 @@
 // }
 
 // export default NavBar;
-import React, { Component } from react 
+import React, { Component } from 'react' 
 
 class NavBar extends Component {
   constructor() {
@@ -63,6 +63,7 @@ class NavBar extends Component {
     }
 
     this.showNav = this.showNav.bind(this)
+    this.closeNav = this.closeNav.bind(this)
   }
 
   showNav(event) {
@@ -70,7 +71,41 @@ class NavBar extends Component {
 
     this.setState({
       showNav: true,
+    }, () => {
+      document.addEventListener('click', this.closeNav)
     })
   }
-  
+
+  closeNav() {
+    this.setState({
+      showNav: false
+    }, () => {
+      document.removeEventListener('click', this.closeNav)
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.showNav}>
+          Games
+        </button>
+        {
+          this.state.showNav
+          ? (
+            <div className="nav">
+              <button></button>
+              <button></button>
+              <button></button>
+            </div>
+          )
+          : (
+            null
+          )
+        }
+      </div>
+    )
+  }
 }
+
+export default NavBar
