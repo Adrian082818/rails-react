@@ -1,70 +1,83 @@
-// import React from 'react';
-// import { NavLink } from 'react-router-dom';
-
-// const NavBar = () => {
-//   return (
-//     <div style={{ background: '#B03B3F', paddingTop: '12px', paddingBottom: '12px', color: 'black', textDecoration: 'none' }}>
-
-//     <NavLink
-//       to="/"
-//       style={{padding: '12px', margin: '0 6px 6px', textDecoration: 'none', color: 'black'}}
-//       >
-//       <span className="navbar-logo">React Games</span>
-//     </NavLink>
-
-//       {/* <NavLink
-//         to="/"
-//         style={link}
-//         >
-//         <span className="navbar-link">Home</span>
-//       </NavLink> */}
-//       <NavLink
-//         to="/games"
-//         style={link}
-//         className="navbar-link"
-//         >
-//         Game inventory
-//       </NavLink>
-//       <NavLink
-//         to="/new"
-//         style={link}
-//         className="navbar-link"
-//         >
-//         Add Game 
-//       </NavLink>
-//       {/* <NavLink
-//         to="/reviews"
-//         style={link}
-//         className="navbar-link"
-//         >
-//         Game Reviews
-//       </NavLink> */}
-//     </div>
-//   )
-// }
-
-// const link = {
-//   width: '100px',
-//   padding: '12px',
-//   margin: '0 6px 6px',
-//   textDecoration: 'none',
-//   color: 'white',
-// }
-
-// export default NavBar;
-
 import React from 'react';
-import { connect } from 'react-redux';
-import { NavBar } from 'react-bootstrap';
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <NavBar bg="black" variant="dark" sticky="top">
+    <div style={{ background: '#B03B3F', paddingTop: '12px', paddingBottom: '12px', color: 'black', textDecoration: 'none' }}>
 
-    </NavBar>
+    <NavLink
+      to="/"
+      style={{padding: '12px', margin: '0 6px 6px', textDecoration: 'none', color: 'black'}}
+      >
+      <span className="navbar-logo">React Games</span>
+    </NavLink>
+
+      {/* <NavLink
+        to="/"
+        style={link}
+        >
+        <span className="navbar-link">Home</span>
+      </NavLink> */}
+      <NavLink
+        to="/games"
+        style={link}
+        className="navbar-link"
+        >
+        Game inventory
+      </NavLink>
+      <NavLink
+        to="/new"
+        style={link}
+        className="navbar-link"
+        >
+        Add Game 
+      </NavLink>
+      {/* <NavLink
+        to="/reviews"
+        style={link}
+        className="navbar-link"
+        >
+        Game Reviews
+      </NavLink> */}
+    </div>
   )
 }
+
+const link = {
+  width: '100px',
+  padding: '12px',
+  margin: '0 6px 6px',
+  textDecoration: 'none',
+  color: 'white',
+}
+
+export default NavBar;
+
+// import React from 'react';
+// import { connect } from 'react-redux';
+// import { Navbar } from 'react-bootstrap';
+// import NavDropdown from 'react-bootstrap/NavDropdown'
+
+// const NavBar = () => {
+//   return (
+//     <Navbar bg="black" variant="dark" sticky="top">
+//       <Navbar.Brand>
+//         <img 
+//         src="./logo.png"
+//         width="30"
+//         height="30"
+//         className="d-inline-block align-top"
+//         alt=" "></img>
+//       </Navbar.Brand>
+//       <NavDropdown bg="black" title="Menu" id="collasible-nav-dropdown" style={{ color: "#5299d3" }}>
+//         <NavDropdown.item style={{ color: "#5299d3" }} href="/">Home</NavDropdown.item>
+//       </NavDropdown>
+
+//     </Navbar>
+//   )
+// }
+
+// export default connect()(Navbar)
 
 // class NavBar extends Component {
 //   constructor() {
@@ -120,4 +133,4 @@ const NavBar = () => {
 //   }
 // }
 
-export default connect(NavBar)
+// export default connect(NavBar)
