@@ -52,60 +52,72 @@
 // }
 
 // export default NavBar;
-import React, { Component } from 'react' 
 
-class NavBar extends Component {
-  constructor() {
-    super()
+import React from 'react';
+import { connect } from 'react-redux';
+import { NavBar } from 'react-bootstrap';
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
-    this.state = {
-      showNav: false,
-    }
+const NavBar = () => {
+  return (
+    <NavBar bg="black" variant="dark" sticky="top">
 
-    this.showNav = this.showNav.bind(this)
-    this.closeNav = this.closeNav.bind(this)
-  }
-
-  showNav(event) {
-    event.preventDefault()
-
-    this.setState({
-      showNav: true,
-    }, () => {
-      document.addEventListener('click', this.closeNav)
-    })
-  }
-
-  closeNav() {
-    this.setState({
-      showNav: false
-    }, () => {
-      document.removeEventListener('click', this.closeNav)
-    })
-  }
-
-  render() {
-    return (
-      <div>
-        <button onClick={this.showNav}>
-          Games
-        </button>
-        {
-          this.state.showNav
-          ? (
-            <div className="nav">
-              <button></button>
-              <button></button>
-              <button></button>
-            </div>
-          )
-          : (
-            null
-          )
-        }
-      </div>
-    )
-  }
+    </NavBar>
+  )
 }
 
-export default NavBar
+// class NavBar extends Component {
+//   constructor() {
+//     super()
+
+//     this.state = {
+//       showNav: false,
+//     }
+
+//     this.showNav = this.showNav.bind(this)
+//     this.closeNav = this.closeNav.bind(this)
+//   }
+
+//   showNav(event) {
+//     event.preventDefault()
+
+//     this.setState({
+//       showNav: true,
+//     }, () => {
+//       document.addEventListener('click', this.closeNav)
+//     })
+//   }
+
+//   closeNav() {
+//     this.setState({
+//       showNav: false
+//     }, () => {
+//       document.removeEventListener('click', this.closeNav)
+//     })
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={this.showNav}>
+//           Games
+//         </button>
+//         {
+//           this.state.showNav
+//           ? (
+//             <div className="nav">
+//               <button></button>
+//               <button></button>
+//               <button></button>
+//             </div>
+//           )
+//           : (
+//             null
+//           )
+//         }
+//       </div>
+//     )
+//   }
+// }
+
+export default connect(NavBar)
