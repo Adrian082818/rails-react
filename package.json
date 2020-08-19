@@ -3,6 +3,7 @@
     "lodash": "^4.17.20",
     "react-bootstrap": "^1.0.1",
     "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "serialize-javascript": "^4.0.0"
   }
 }
