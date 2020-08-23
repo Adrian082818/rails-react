@@ -1,136 +1,81 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-
-const NavBar = () => {
-  return (
-    <div style={{ background: '#B03B3F', paddingTop: '12px', paddingBottom: '12px', color: 'black', textDecoration: 'none' }}>
-
-    <NavLink
-      to="/"
-      style={{padding: '12px', margin: '0 6px 6px', textDecoration: 'none', color: 'black'}}
-      >
-      <span className="navbar-logo">React Games</span>
-    </NavLink>
-
-      {/* <NavLink
-        to="/"
-        style={link}
-        >
-        <span className="navbar-link">Home</span>
-      </NavLink> */}
-      <NavLink
-        to="/games"
-        style={link}
-        className="navbar-link"
-        >
-        Game inventory
-      </NavLink>
-      <NavLink
-        to="/new"
-        style={link}
-        className="navbar-link"
-        >
-        Add Game 
-      </NavLink>
-      {/* <NavLink
-        to="/reviews"
-        style={link}
-        className="navbar-link"
-        >
-        Game Reviews
-      </NavLink> */}
-    </div>
-  )
-}
-
-const link = {
-  width: '100px',
-  padding: '12px',
-  margin: '0 6px 6px',
-  textDecoration: 'none',
-  color: 'white',
-}
-
-export default NavBar;
-
 // import React from 'react';
-// import { connect } from 'react-redux';
-// import { Navbar } from 'react-bootstrap';
-// import NavDropdown from 'react-bootstrap/NavDropdown'
+// import { NavLink } from 'react-router-dom';
 
 // const NavBar = () => {
 //   return (
-//     <Navbar bg="black" variant="dark" sticky="top">
-//       <Navbar.Brand>
-//         <img 
-//         src="./logo.png"
-//         width="30"
-//         height="30"
-//         className="d-inline-block align-top"
-//         alt=" "></img>
-//       </Navbar.Brand>
-//       <NavDropdown bg="black" title="Menu" id="collasible-nav-dropdown" style={{ color: "#5299d3" }}>
-//         <NavDropdown.item style={{ color: "#5299d3" }} href="/">Home</NavDropdown.item>
-//       </NavDropdown>
+//     <div style={{ background: '#B03B3F', paddingTop: '12px', paddingBottom: '12px', color: 'black', textDecoration: 'none' }}>
 
-//     </Navbar>
+//     <NavLink
+//       to="/"
+//       style={{padding: '12px', margin: '0 6px 6px', textDecoration: 'none', color: 'black'}}
+//       >
+//       <span className="navbar-logo">React Games</span>
+//     </NavLink>
+
+//       {/* <NavLink
+//         to="/"
+//         style={link}
+//         >
+//         <span className="navbar-link">Home</span>
+//       </NavLink> */}
+//       <NavLink
+//         to="/games"
+//         style={link}
+//         className="navbar-link"
+//         >
+//         Game inventory
+//       </NavLink>
+//       <NavLink
+//         to="/new"
+//         style={link}
+//         className="navbar-link"
+//         >
+//         Add Game 
+//       </NavLink>
+//       {/* <NavLink
+//         to="/reviews"
+//         style={link}
+//         className="navbar-link"
+//         >
+//         Game Reviews
+//       </NavLink> */}
+//     </div>
 //   )
 // }
 
-// export default connect()(Navbar)
-
-// class NavBar extends Component {
-//   constructor() {
-//     super()
-
-//     this.state = {
-//       showNav: false,
-//     }
-
-//     this.showNav = this.showNav.bind(this)
-//     this.closeNav = this.closeNav.bind(this)
-//   }
-
-//   showNav(event) {
-//     event.preventDefault()
-
-//     this.setState({
-//       showNav: true,
-//     }, () => {
-//       document.addEventListener('click', this.closeNav)
-//     })
-//   }
-
-//   closeNav() {
-//     this.setState({
-//       showNav: false
-//     }, () => {
-//       document.removeEventListener('click', this.closeNav)
-//     })
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <button onClick={this.showNav}>
-//           Games
-//         </button>
-//         {
-//           this.state.showNav
-//           ? (
-//             <div className="nav">
-//               <button></button>
-//               <button></button>
-//               <button></button>
-//             </div>
-//           )
-//           : (
-//             null
-//           )
-//         }
-//       </div>
-//     )
-//   }
+// const link = {
+//   width: '100px',
+//   padding: '12px',
+//   margin: '0 6px 6px',
+//   textDecoration: 'none',
+//   color: 'white',
 // }
 
-// export default connect(NavBar)
+// export default NavBar;
+
+import React from 'react';
+import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
+import styled from 'styled-components'
+
+const Styles = styled.div`
+  .navbar { background-color: #222; }
+  a, .navbar-nav, .navbar-light .nav-link {
+    color: #9FFFCB;
+    &:hover { color: white; } 
+  }
+  .navbar-brand {
+    font-size: 1.4em;
+    color: #9FFFCB;
+    &:hover {color: white; }
+  }
+  .form-center {
+    position: absolute !important;
+    left: 25%;
+    right: 25%;
+  }
+`;
+
+
+
+
+export default Navbar

@@ -31,7 +31,8 @@ const Home = () => (
                 <h2>Welcome to React Games</h2>
             </div>
             
-            <img src="https://media.giphy.com/media/35B3Val0pYgtpScqsz/giphy.gif" alt="gaming controller" className="gameGif"></img>
+            {/* <img src="https://media.giphy.com/media/35B3Val0pYgtpScqsz/giphy.gif" alt="gaming controller" className="gameGif"></img> */}
+            <img src="https://media.giphy.com/media/AhhGtrpj5ZxGZER5yC/giphy.gif" alt="gaming controller" className="gameGif"></img>
         </Container>
         <br />
         <button className="ui blue inverted animated button" onClick={() => window.location.href='/games'}>
